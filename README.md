@@ -5,7 +5,7 @@
 Reproducer for an iOS (new architecture) bug where an `<Image>` shows the picture of another `<Image>` that was unmounted just before. The component's other content is correct, only the image is wrong, and it happens intermittently.
 
 - Snack: https://snack.expo.dev/@mattijsf/image-recycle-stale-load-ios
-- Issue: TBD
+- Issue: https://github.com/react/react-native/issues/58667
 
 ## What the app does
 
