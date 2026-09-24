@@ -17,7 +17,7 @@ After 50 rounds (about a minute) the run stops and the last green round stays on
 
 Expected: every tile is green during the green phase, and the counters stay at 0.
 
-Actual on iOS: some tiles stay red. A wrong image is counted when a green tile's `onLoad` reports the red image's width (96) instead of 64. On an iPhone one run had a wrong image in 32 of 50 rounds, 111 wrong images in total. The same app on Android: 0 of 50.
+Actual on iOS: some tiles stay red. A wrong image is counted when a green tile's `onLoad` reports the red image's width (96) instead of 64. On an iPhone one run had a wrong image in 32 of 50 rounds, 111 wrong images in total. In the iOS simulator (Release build, iPhone 17 Pro Max, iOS 26.5): 39 of 50 rounds, 323 wrong images. The same app on Android: 0 of 50.
 
 ## Why it happens
 
@@ -34,4 +34,4 @@ cd ios && bundle install && bundle exec pod install && cd ..
 yarn ios
 ```
 
-Tap Start once it is enabled (it first prefetches the green image) and watch the counters. The effect is timing dependent; the numbers above were measured on a real iPhone.
+Tap Start once it is enabled (it first prefetches the green image) and watch the counters. The effect is timing dependent, but it shows up on both a real iPhone and the simulator.
